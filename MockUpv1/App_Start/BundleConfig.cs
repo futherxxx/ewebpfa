@@ -21,7 +21,7 @@ namespace MockUpv1
 
             //the other theme list
             bundles.Add(new ScriptBundle("~/bundles/otherscripts").Include("~/Scripts/jquery.easing.min.js", "~/Scripts/wow.min.js", "~/Scripts/corpo.js","~/Scripts/color-style.js","~/Scripts/custom.js"));
-
+           
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));

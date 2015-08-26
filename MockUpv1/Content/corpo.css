@@ -57,7 +57,8 @@ hr.star-light
 hr.star-light:after 
 {
     color: #fff;
-    background-color: #18bc9c;
+    background-color:#1E6002
+   /*background-color: #18bc9c;*/ 
 }
 hr.star-primary 
 {
@@ -372,13 +373,14 @@ header .intro-text .skills
 }
 /**********************Tools*************************/
 .fa.fa-calendar, .fa.fa-clock-o, .fa.fa-user, .fa.fa-bar-chart
-{
-    font-size:90px;
+{   /*font-size:90px stephen edit*/
+    font-size:45px;
     color:#999999;
 }
 #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-calendar,#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-clock-o, #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-user,  #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-bar-chart
 {
-    color:#79a600;
+
+    //color:#79a600;
 }
 .btn.btn-lg.btn-icon
 {
@@ -1071,7 +1073,8 @@ iframe
 /********************************************** Color Option *************************************************/
 #color-styles 
 {
-    background: #355313;
+    background:#1E6002;
+    //background: #355313;
     width: 140px;
     position:fixed;
     top:130px;

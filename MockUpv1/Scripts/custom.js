@@ -49,7 +49,9 @@
 	
     /* Tooltip */
 	$('[data-toggle="tooltip"]').tooltip({'placement': 'top'});
-		/* Header */
+
+
+    /* Header */
 	$('.header-relative').on('click',function(e){
 	    $('.navbar').removeClass('navbar-fixed-top');
 	});

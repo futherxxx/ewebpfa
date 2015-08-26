@@ -20,3 +20,32 @@
     color:#707B82
 
 }
+.navbar-default .navbar-nav .open .dropdown-menu > li > a{
+    color: #707B82;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+    background: #1E6002;
+}
+
+a {
+    color: #1E6002;
+    text-decoration: none;
+}
+
+#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover:hover .btn.btn-lg.btn-icon {
+    background-color: #1E6002;
+    color: #FFF;
+    border-color: transparent;
+    transition-duration: 0.5s;
+}
+
+#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover:hover .icon-heading {
+    color: #1E6002; 
+}
+
+
+.panel-success {
+    border-color: #1E6002; 
+}
