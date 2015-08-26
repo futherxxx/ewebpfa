@@ -33,10 +33,10 @@
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                                     <img src="logo.png">
                                 </div>
-                                <br/><br/>
+                               
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                                         <br/>
-                                <i class="fa fa-phone fa-2x"></i>&nbsp;<strong>08073737362,0128282</strong> <div class="pull-right"> <a href="#"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-video-camera fa-2x"></i></a></div><!-- container for the icons -->
+                                <i class="fa fa-phone fa-2x"></i>&nbsp;<strong>08073737362,0128282</strong> <div class="pull-right"> <a href="https://www.facebook.com/nlpcpfa"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;<a href="https://twitter.com/nlpcpfa"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-video-camera fa-2x"></i></a></div><!-- container for the icons -->
                                 </div>
                         </div>
                         <!-- row 1 ends -->
@@ -51,10 +51,10 @@
                                 </div>
  
                                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <a href="#">RSA Login</a>&nbsp;|
-                                        <a href="#">Agent Login</a>&nbsp;|                                        
-                                        <a href="#">SMS Enquiry</a>&nbsp;|
-                                        <a href="#">Blog</a>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>RSA Login</a>&nbsp;|
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Agent Login</a>&nbsp;|                                        
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>SMS Enquiry</a>&nbsp;|
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Blog</a>
                                 </div>
                         </div>
 				<!-- row 2 ends -->
@@ -80,23 +80,72 @@
                                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                                                         <ul class="nav navbar-nav">
-                                                              <!--  <li><a href="#">Home</a></li>-->
+                                                            @*Remove Home page from the Index page...*@
+                                                           @if (@ViewBag.Title !="Home Page")
+                                                           {    <li><a href="/">Home</a></li>}
+                                                                                             
                                                                         <li class="dropdown">
                                                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
                                                                         <ul class="dropdown-menu">
-                                                                        <li><a href="#">Who we Are</a></li>
-                                                                        <li><a href="#">Our Core Values</a></li>
-                                                                        <li><a href="#">Our Business Strategy</a></li>
-                                                                        <li><a href="#">Meet Our Board</a></li>
-                                                                        <li><a href="#">Meet Our Management Team</a></li>
+                                                                        <li><a href=VirtualPathUtility.ToAbsolute(@Url.Action("aboutus", "Home"))>Who we Are</a></li>
+                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("missions","Home"))>Our Core Values</a></li>
+                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("bizstrategy","Home"))>Our Business Strategy</a></li>
+                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("board", "Home"))>Meet Our Board</a></li>
+                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("mgtteam", "Home"))>Meet Our Management Team</a></li>
                                                                         </ul>
                                                                         </li>
-                                                                <li><a href="#">Services</a></li>
-                                                                <li><a href="#">Financials</a></li>
-                                                                <li><a href="#">Benefits</a></li>
-                                                                <li><a href="#">Reach Us</a></li>
-                                                                <li><a href="#">FAQs</a></li>                               
-                                                             
+
+                                                            <!--services start-->
+                                                            <li class="dropdown">
+                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a href=VirtualPathUtility.ToAbsolute(@Url.Action("pension", "Home" ))>Corporate Pension</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("individual", "Home"))>Individual Pensions Scheme(IPS)</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("cps", "Home"))>Contributory Pension Scheme</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("progwith", "Home"))>Program Withdrawal</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("pensiontypes","Home"))>Payment Types</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <!--services end-->
+                                                            <!--Financials -->
+                                                            <li class="dropdown">
+                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Financials <b class="caret"></b></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a href=VirtualPathUtility.ToAbsolute(@Url.Action("fundmgrrpt", "Home"))>Fund Manager's Report</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("investport", "Home"))>Structure of Investment Portfolio</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("auditrep", "Home"))>Audited Report</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("feemgt", "Home"))>Fees</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <!-- financials ends-->
+
+                                                            <!--benefits start-->
+                                                          
+                                                          
+
+                                                                
+                                                                <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("benadmin","Home"))>Benefits</a></li>
+
+                                                            <!--benefits ends-->
+
+
+                                                            <!--reach us-->
+                                                            <li class="dropdown">
+                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reach Us<b class="caret"></b></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a href=VirtualPathUtility.ToAbsolute(@Url.Action("locations", "Home"))>Who we Are</a></li>
+                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("customercare", "Home"))>Our Core Values</a></li>
+                                                               
+                                                                </ul>
+                                                            </li>
+                                                            <!--reach us end-->
+
+
+                                                            <!--faq starts-->
+                                                                <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>FAQs</a></li>                               
+                                                             <!-- faq ends-->
+
+
                                                         </ul>
                                                        
                                                    
@@ -106,31 +155,16 @@
                                 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
                                        
                                 </div>
- 						<br/><br/><br/><br/>
+ 						<br/><br/><br/><br/>    
  
                         </div>
                         <!-- row 4 ends here -->
-
-
-
-
-
-                        <!- row 5 starts -->
-                       <div class="row">
-                       	<br/>
-                       </div>
-                       <!-- row 5 ends -->
-
-
-
-
-
-
 
                         <!--row 6 starts here-->
                       
 
 <!--include body within here-->
+
     @RenderBody()
     <!--stop body here-->
 
@@ -142,25 +176,25 @@
 								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 									<strong>Quick Links</strong><br/>
 								<br/>
-								<a href="#">Fraud Alert</a><br/>
-								<a href="#">Branch Offices</a><br/>
-								<a href="#">Term of Use</a><br/>
-								<a href="#">Feedback form</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Fraud Alert</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Branch Offices</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Term of Use</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Feedback form</a><br/>
 								</div>
 								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 									<br/>
 									<br/>
-						  	<a href="#">Downloads</a><br/>
-						  	<a href="#">Reports</a><br/>
-						  	<a href="#">Pension Act 2014</a><br/>
-						  	<a href="#">Staff Login</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Downloads</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Reports</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Pension Act 2014</a><br/>
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Staff Login</a><br/>
 						  </div>
 						  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 						  	<br/>
 							<br/>
-						  	<a href="#">Branch Contribution</a><br/>
-						  	<a href="#">Approved form of return</a><br/>
-						  	<a href="#">Benefits Administration</a><br/>
+                  <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Branch Contribution</a><br/>
+                  <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Approved form of return</a><br/>
+                  <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Benefits Administration</a><br/>
 						  </div>
 						  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 hidden-xs">
 						  	<strong>NLPC PFA LIMITED</strong>
@@ -176,7 +210,7 @@
 						  
 						  <div class="panel-footer">
 								<center><strong>Copyright 2015 © NLPC PFA LTD.</strong>|All Rights Reserved</center>
-								<center><a href="#">Privacy policy</a> | <a href="">Terms of use</a> |<a href="">Data protection and Confidentiality</a> </center>
+								<center><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Privacy policy</a> | <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Terms of use</a> |<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Data protection and Confidentiality</a> </center>
 
 
 							</div>

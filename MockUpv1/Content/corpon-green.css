@@ -1,0 +1,22 @@
+#page-top{
+    padding-top:5px;
+}
+
+#tools {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev{
+    margin-left:-1px;
+   
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{
+      margin-right:-1px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color:#707B82
+
+}
