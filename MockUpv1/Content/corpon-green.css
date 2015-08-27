@@ -49,3 +49,23 @@ a {
 .panel-success {
     border-color: #1E6002; 
 }
+
+.btn-primary {
+    color: #FFF;
+    background-color: #1E6002; 
+    border-color: #1E6002; 
+}
+.panel-heading.active {
+    background-color: #1E6002;
+    color: #FFF;
+}
+
+.panel-success > .panel-heading {
+    color: #FFF;
+    background-color: #1E6002;
+    border-color: #1E6002;
+}
+.navbar-default .navbar-nav > li > a {
+    font-size: 14px;
+    color: #fff;
+}

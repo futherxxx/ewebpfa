@@ -15,7 +15,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="item">
-            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
+            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNmE2YTZhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Example headline.</h1>
@@ -66,26 +66,30 @@
             <div class="col-lg-3 col-md-3 col-sm-6 text-center wow zoomIn animated animated" style="visibility: visible;" data-wow-delay="100ms" data-wow-duration="1500ms">
                 <div class="icon watch"><i class="fa fa-suitcase"></i></div>
                 <h3 class="icon-heading">Fund Manager's Report</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem  industry Ipsum has been industry</p>
-                <a class="btn btn-lg btn-icon" href="#">Read More</a>
+                <p>Click the link below to find out more about our Fund management offerings.</p>
+                <a class="btn btn-lg btn-icon" href=@VirtualPathUtility.ToAbsolute(@Url.Action("fundmgrrpt","Home"))>Read More</a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 text-center wow zoomIn animated animated" style="visibility: visible;" data-wow-delay="100ms" data-wow-duration="1500ms">
                 <div class="icon watch"><i class="fa fa-suitcase"></i></div>
                 <h3 class="icon-heading">Investment Portfolio</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem  industry Ipsum has been industry</p>
-                <a class="btn btn-lg btn-icon" href="#">Read More</a>
+                <p>The quality of where you invest has become a key part of your investment case.</p>
+                <a class="btn btn-lg btn-icon" href=@VirtualPathUtility.ToAbsolute(@Url.Action("investport","Home"))>Read More</a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 text-center wow zoomIn animated animated" style="visibility: visible;" data-wow-delay="100ms" data-wow-duration="1500ms">
                 <div class="icon man"><i class="fa fa-money"></i></div>
                 <h3 class="icon-heading">Unit Price</h3><br />
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem  industry Ipsum has been industry</p>
-                <a class="btn btn-lg btn-icon" href="#">Read More</a>
+                <p>
+                    RSA Unit Price : <strong>2.4608</strong> AS AT: 26/08/2015<br/>
+                    RF Unit Price : <strong>1.9873</strong> AS AT: 26/08/2015
+                </p>
+                <a class="btn btn-lg btn-icon" href=@VirtualPathUtility.ToAbsolute(@Url.Action("auditrep","Home"))>Read More</a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 text-center wow zoomIn animated animated" style="visibility: visible;" data-wow-delay="100ms" data-wow-duration="2000ms">
                 <div class="icon man"><i class="fa fa-suitcase"></i></div>
                 <h3 class="icon-heading">Audited Reports</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem  industry Ipsum has been industry </p>
-                <a class="btn btn-lg btn-icon" href="#">Read More</a>
+                <p> We Strive to comply to regulatory standards.
+                 For more our current audit report click the link below. </p>
+                <a class="btn btn-lg btn-icon" href=@VirtualPathUtility.ToAbsolute(@Url.Action("auditrep","Home"))>Read More</a>
             </div>
         </section>
     </div>
@@ -143,7 +147,7 @@
                 <div class="icon man"><i class="fa fa-money"></i></div>
                 <h3 class="icon-heading">Media Center</h3><br />
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting Lorem  industry Ipsum has been industry</p>
-                <a class="btn btn-lg btn-icon" href="#">Read More</a>
+                <a class="btn btn-lg btn-icon" href=@VirtualPathUtility.ToAbsolute(@Url.Action("gallery","Home"))>Read More</a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 text-center wow zoomIn animated animated" style="visibility: visible;" data-wow-delay="100ms" data-wow-duration="2000ms">
                 <div class="icon man"><i class="fa fa-suitcase"></i></div>

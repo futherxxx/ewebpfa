@@ -90,6 +90,12 @@ namespace MockUpv1.Controllers
 
             return View();
         }
+        public ActionResult gallery()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
         public ActionResult individual()
         {
             ViewBag.Message = "Your contact page.";
