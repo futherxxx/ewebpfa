@@ -303,7 +303,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\_RSALogin.cshtml" />
+    <Content Include="Views\Home\RSALogin.cshtml" />
     <Content Include="Views\Home\auditrep.cshtml" />
     <Content Include="Views\Home\benadmin.cshtml" />
     <Content Include="Views\Home\bizstrategy.cshtml" />

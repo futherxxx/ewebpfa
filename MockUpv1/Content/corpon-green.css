@@ -13,7 +13,7 @@
 }
 
 .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{
-      margin-right:-1px;
+      margin-right:19px;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
@@ -68,4 +68,8 @@ a {
 .navbar-default .navbar-nav > li > a {
     font-size: 14px;
     color: #fff;
+}
+
+.table > thead > tr > td.success, .table > tbody > tr > td.success, .table > tfoot > tr > td.success, .table > thead > tr > th.success, .table > tbody > tr > th.success, .table > tfoot > tr > th.success, .table > thead > tr.success > td, .table > tbody > tr.success > td, .table > tfoot > tr.success > td, .table > thead > tr.success > th, .table > tbody > tr.success > th, .table > tfoot > tr.success > th {
+    background-color: #1E6002;
 }

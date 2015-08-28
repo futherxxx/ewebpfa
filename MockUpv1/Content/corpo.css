@@ -377,12 +377,12 @@ header .intro-text .skills
 */
 
 /**********************Tools*************************/
-.fa.fa-calendar, .fa.fa-clock-o, .fa.fa-user, .fa.fa-bar-chart
+.fa.fa-calendar, .fa.fa-clock-o, .fa.fa-user, .fa.fa-bar-chart .fa.fa-file-o
 {   /*font-size:90px stephen edit*/
     font-size:45px;
     color:#999999;
 }
-#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-calendar,#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-clock-o, #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-user,  #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-bar-chart
+#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-calendar,#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-clock-o, #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-user,  #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-bar-chart .fa.fa-file-o
 {
 
     //color:#79a600;
