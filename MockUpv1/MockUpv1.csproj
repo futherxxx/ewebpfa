@@ -246,6 +246,7 @@
     <Content Include="Images\slide g.png" />
     <Content Include="Images\slide h.png" />
     <Content Include="Images\slide i.png" />
+    <Content Include="logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrapwa.js" />
     <Content Include="Scripts\bootstrap.min.js" />
