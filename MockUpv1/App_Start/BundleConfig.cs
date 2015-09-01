@@ -24,11 +24,11 @@ namespace MockUpv1
            
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js","~/Scripts/jquery-ui.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css", "~/Content/animate.css","~/Content/font-awesome.css","~/Content/corpo.css","~/Content/corpon-green.css","~/Content/corpon-layout.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css","~/Content/jquery-ui.css","~/Content/jquery-ui.theme.css"));
         }
     }
 }
