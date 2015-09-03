@@ -73,7 +73,8 @@
 	});
 	    //if the page is the faq transform
 	$('#accordion').accordion();
-
+	    //add tooltip control on the page
+	$('[data-toggle="tooltip"]').tooltip();
 
 	});
 

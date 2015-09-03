@@ -379,7 +379,8 @@ header .intro-text .skills
 /**********************Tools*************************/
 .fa.fa-calendar, .fa.fa-clock-o, .fa.fa-user, .fa.fa-bar-chart .fa.fa-file-o
 {   /*font-size:90px stephen edit*/
-    font-size:45px;
+    /*font-size:45px;*/
+    font-size:30px;
     color:#999999;
 }
 #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-calendar,#tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-clock-o, #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-user,  #tools .col-lg-3.col-md-3.col-sm-6.text-center:hover .fa.fa-bar-chart .fa.fa-file-o
@@ -543,7 +544,9 @@ header .intro-text .skills
 }
 .fa.fa-life-ring, .fa.fa-file-o, .fa.fa-comments, .fa.fa-users, .fa.fa-line-chart, .fa.fa-globe, .fa.fa-suitcase, .fa.fa-user, .fa.fa-money
 {
-	font-size:70px;
+   /*reduced fonts*/
+	/*font-size:70px;*/
+    font-size:50px;
 	float:left;
 	margin-right:20px;
 	color:#999999;
@@ -2003,7 +2006,8 @@ iframe
     }
 }
 .navbar {
-    text-transform: uppercase;
+    /*Stephen Edit */
+   /*text-transform: uppercase;*/ 
     font-family:Lato;
 }
 .navbar-default,

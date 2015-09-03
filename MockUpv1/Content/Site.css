@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+/* Custom font for NLPC-PFA*/
+ourfont{
+    font-family: Arial;
+    font-size:;
+    font-weight:;
+}

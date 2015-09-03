@@ -144,16 +144,21 @@
                                     <div id="login-form">
                                         <div class="chat-bubble-arrow-border"></div>
                                         <div class="chat-bubble-arrow"></div>
-                                        <form method="post" id="signin" action="">
+                                        <form method="post" id="signin" action="http://nlpcpfa.com/newsite/Login_RSA">
                                             <label for="username">Email:</label>
-                                            <input name="username" id="username" title="username" value="" type="text">
+                                            <input name="UserName" id="UserName" title="username" value="" type="text">
                                             <label for="password">Password:</label>
-                                            <input name="password" id="password" title="password" value="" type="password">
+                                            <input name="password" id="Password" title="password" value="" type="password">
 
                                             <input class="alert-btn login-btn-home" value="Login" type="submit">
 
                                             <input name="action" value="login" type="hidden">
-                                            <span style="float: left; margin-top:6px;"><a href="" style="text-decoration:underline;">Forgot your password?</a></span>
+                                            <span style="float: left; margin-top:6px;">
+                                                <a href="" style="text-decoration:underline;">Forgot your password?</a>
+                                                <br />
+                                                <a href="#" style="margin-left: 160px;" onclick="$('#login-form').toggle()">close</a>
+                                            </span>
+
                                         </form>
                                     </div>
                              
@@ -196,8 +201,8 @@
                                                                         <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("About", "Home"))>Who we Are</a></li>
                                                                         <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("missions","Home"))>Our Core Values</a></li>
                                                                         <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("bizstrategy","Home"))>Our Business Strategy</a></li>
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("board", "Home"))>Meet Our Board</a></li>
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("mgtteam", "Home"))>Meet Our Management Team</a></li>
+                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("board", "Home"))>Board of Directors</a></li>
+                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("mgtteam", "Home"))>Management Team</a></li>
                                                                         </ul>
                                                                         </li>
 
