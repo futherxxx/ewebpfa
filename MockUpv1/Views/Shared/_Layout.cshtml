@@ -1,348 +1,344 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     <style type="text/css">
         element {
-    display: block;
-}
-#login-form {
-    width: 222px;
-    position: absolute;
-    z-index: 999;
-    top: 25px;
-    margin-left: -90px;
-    background: #FFF none repeat scroll 0% 0%;
-    border: 1px solid #BDC4C9;
-    padding: 20px;
+            display: block;
+        }
 
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    display: none;
-}
-.chat-bubble-arrow-border {
-    border-color: transparent transparent #BDC4C9;
-    border-style: solid;
-    border-width: 9px;
-    height: 0px;
-    width: 0px;
-    position: absolute;
-    top: -19px;
-    right: 100px;
-}
-.chat-bubble-arrow {
-    border-color: transparent transparent #FFF;
-    border-style: solid;
-    border-width: 9px;
-    height: 0px;
-    width: 0px;
-    position: absolute;
-    top: -17px;
-    right: 100px;
-}
-#signin label {
-    font-size: 14px;
-}
-#login-form form input[type="password"], #login-form form input[type="text"] {
-    width: 183px;
-    padding: 5px 10px;
-    font-size: 13px;
-    outline: 0px none #3252A5;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    border: 1px solid #CCC;
-    font-family: "Open Sans",arial,helvetica;
-}
+        #login-form {
+            width: 222px;
+            position: absolute;
+            z-index: 999;
+            top: 25px;
+            margin-left: -90px;
+            background: #FFF none repeat scroll 0% 0%;
+            border: 1px solid #BDC4C9;
+            padding: 20px;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            display: none;
+        }
 
-#login-form form input[type="password"], #login-form form input[type="text"] {
-    width: 183px;
-    padding: 5px 10px;
-    font-size: 13px;
-    outline: 0px none #3252A5;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    border: 1px solid #CCC;
-    font-family: "Open Sans",arial,helvetica;
-}
-.login-btn-home {
-    margin-left: 0px;
-    padding: 3px 15px;
-    width: 120px;
-    margin-top: 5px;
-}
-.alert-btn {
-    background: #1E6002 linear-gradient(to bottom, #1E6002, #1E6000) repeat scroll 0% 0%;
-    border-radius: 2px;
-    color: #FFF;
-    font-size: 15px;
-    padding: 5px 15px;
-    text-decoration: none;
-    font-family: "Open Sans",arial,helvetica;
-    margin-left: 4px;
-    font-style: normal;
-    cursor: pointer;
-    border: medium none;
-    text-align: center;
-}
+        .chat-bubble-arrow-border {
+            border-color: transparent transparent #BDC4C9;
+            border-style: solid;
+            border-width: 9px;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top: -19px;
+            right: 100px;
+        }
+
+        .chat-bubble-arrow {
+            border-color: transparent transparent #FFF;
+            border-style: solid;
+            border-width: 9px;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top: -17px;
+            right: 100px;
+        }
+
+        #signin label {
+            font-size: 14px;
+        }
+
+        #login-form form input[type="password"], #login-form form input[type="text"] {
+            width: 183px;
+            padding: 5px 10px;
+            font-size: 13px;
+            outline: 0px none #3252A5;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            border: 1px solid #CCC;
+            font-family: "Open Sans",arial,helvetica;
+        }
+
+        #login-form form input[type="password"], #login-form form input[type="text"] {
+            width: 183px;
+            padding: 5px 10px;
+            font-size: 13px;
+            outline: 0px none #3252A5;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            border: 1px solid #CCC;
+            font-family: "Open Sans",arial,helvetica;
+        }
+
+        .login-btn-home {
+            margin-left: 0px;
+            padding: 3px 15px;
+            width: 120px;
+            margin-top: 5px;
+        }
+
+        .alert-btn {
+            background: #1E6002 linear-gradient(to bottom, #1E6002, #1E6000) repeat scroll 0% 0%;
+            border-radius: 2px;
+            color: #FFF;
+            font-size: 15px;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-family: "Open Sans",arial,helvetica;
+            margin-left: 4px;
+            font-style: normal;
+            cursor: pointer;
+            border: medium none;
+            text-align: center;
+        }
     </style>
 
 </head>
 <body id="page-top" class="index">
-	<div class="box-layout">
-	<a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a> <!--Bottom right - Tob Button-->
-	<!--PreLoader-->
-	<div id="preloader">
-		<div class="preloader-container">
-			<div class="pre-circle">
-				<p>Please Wait...</p>
-				<!-- Loader -->
-				<span class="rotate double"></span>
-				<div class="pre-logo">
-                    <img alt="logo" src="img/logo.png" style="margin-left: 95px!important"/>
-			</div>
-		</div>
-	</div>
-	</div> <!--/PreLoader-->
-<!-- nlpc container -->
+    <div class="box-layout">
+        <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a> <!--Bottom right - Tob Button-->
+        <!--PreLoader-->
+        <div id="preloader">
+            <div class="preloader-container">
+                <div class="pre-circle">
+                    <p>Please Wait...</p>
+                    <!-- Loader -->
+                    <span class="rotate double"></span>
+                    <div class="pre-logo">
+                        <img alt="logo" src="img/logo.png" style="margin-left: 95px!important" />
+                    </div>
+                </div>
+            </div>
+        </div> <!--/PreLoader-->
+        <!-- nlpc container -->
 
-<div class="container">
-	 <!--row 1 -->
-                        
-                        <div class="row">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="logo.png">
-                                </div>
-                               
-                                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                        <br/>
-                                <i class="fa fa-phone fa-2x"></i>&nbsp;<strong>08073737362,0128282</strong> <div class="pull-right"> <a href="https://www.facebook.com/nlpcpfa"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;<a href="https://twitter.com/nlpcpfa"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("gallery","Home"))><i class="fa fa-video-camera fa-2x"></i></a></div><!-- container for the icons -->
-                                </div>
+        <div class="container">
+            <!--row 1 -->
+
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img src="logo.png">
+                </div>
+
+                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                    <br />
+                    <i class="fa fa-phone fa-2x"></i>&nbsp;<strong>08073737362,0128282</strong> <div class="pull-right"> <a href="https://www.facebook.com/nlpcpfa"><i class="fa fa-facebook fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;<a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;<a href="https://twitter.com/nlpcpfa"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("gallery","Home"))><i class="fa fa-video-camera fa-2x"></i></a></div><!-- container for the icons -->
+                </div>
+            </div>
+            <!-- row 1 ends -->
+            <!--row 2 -->
+            <div class="row">
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+                </div>
+
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+                    @*<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("RSALogin","Home"))>RSA Login</a>&nbsp;| *@
+                    <!-- show login module -->
+                    <a id="loginbtn" href='#' onclick="$('#login-form').toggle()">RSA Login</a>&nbsp;|
+                    <!-- end login module -->
+                    <div id="login-form">
+                        <div class="chat-bubble-arrow-border"></div>
+                        <div class="chat-bubble-arrow"></div>
+                        <form method="post" id="signin" action="http://nlpcpfa.com/newsite/Login_RSA">
+                            <label for="username">Email:</label>
+                            <input name="UserName" id="UserName" title="username" value="" type="text">
+                            <label for="password">Password:</label>
+                            <input name="password" id="Password" title="password" value="" type="password">
+
+                            <input class="alert-btn login-btn-home" value="Login" type="submit">
+
+                            <input name="action" value="login" type="hidden">
+                            <span style="float: left; margin-top:6px;">
+                                <a href="" style="text-decoration:underline;">Forgot your password?</a>
+                                <br />
+                                <a href="#" style="text-decoration:underline;">New user?</a>
+                                <a href="#" style="margin-left: 160px;" onclick="$('#login-form').toggle()">close</a>
+                            </span>
+
+                        </form>
+                    </div>
+
+                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>SMS Enquiry</a>&nbsp;|
+                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("locations","Home"))>Branch Offices</a>&nbsp;|
+                    @*<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Blog</a>*@
+                </div>
+            </div>
+            <!-- row 2 ends -->
+            <!--row 3 -->
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+
+                </div>
+
+                <!--<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">-->
+                <div>
+                   <!--<nav class="navbar navbar-default" role="navigation" style="margin-left: 11px;">--> 
+                    <nav class="navbar navbar-default" role="navigation">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!-- <a class="navbar-brand" href="#">NLPC-PFA</a>-->
                         </div>
-                        <!-- row 1 ends -->
-                        <!--row 2 -->
-                        <div class="row">
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                @*Remove Home page from the Index page...*@
+                                @if (@ViewBag.Title != "Home Page")
+                                {
+                                    <li><a href="/">Home</a></li>}
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("About", "Home"))>Who we Are</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("missions","Home"))>Our Core Values</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("bizstrategy","Home"))>Our Business Strategy</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("board", "Home"))>Board of Directors</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("mgtteam", "Home"))>Management Team</a></li>
+                                    </ul>
+                                </li>
+
+                                <!--services start-->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("pension", "Home" ))>Corporate Pension</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("individual", "Home"))>Individual Pensions Scheme(IPS)</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("cps", "Home"))>Contributory Pension Scheme</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("progwith", "Home"))>Program Withdrawal</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("pensiontypes","Home"))>Payment Types</a></li>
+                                    </ul>
+                                </li>
+                                <!--services end-->
+                                <!--Financials -->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Financials <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("fundmgrrpt", "Home"))>Fund Manager's Report</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("investport", "Home"))>Structure of Investment Portfolio</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("auditrep", "Home"))>Audited Report</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("feemgt", "Home"))>Fees</a></li>
+                                    </ul>
+                                </li>
+                                <!-- financials ends-->
+                                <!--benefits start-->
+
+
+
+
+                                <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("benadmin","Home"))>Benefits</a></li>
+
+                                <!--benefits ends-->
+                                <!--reach us-->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reach Us<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("locations", "Home"))>Locations</a></li>
+                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("customercare", "Home"))>Customer Care</a></li>
+
+                                    </ul>
+                                </li>
+                                <!--reach us end-->
+                                <!--faq starts-->
+                                <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>FAQs</a></li>
+                                <!-- faq ends-->
+
+
+                            </ul>
+
+
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                    <!--</div>-->
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+
+                    </div>
+                    <!-- <br/><br/><br/><br/>  -->
+
+                </div>
+                <!-- row 4 ends here -->
+                <!--row 6 starts here-->
+                <!--include body within here-->
+                @RenderBody()
+                <!--stop body here-->
+                <!--footer starts -->
+                <div class="row" style="margin-left -9px;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                       
+                                    <strong>Quick Links</strong><br />
+                                    <br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Fraud Alert</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Branch Offices</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Term of Use</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Feedback form</a><br />
                                 </div>
- 
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                       
+                                    <br />
+                                    <br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Downloads</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Reports</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Pension Act 2014</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Staff Login</a><br />
                                 </div>
- 
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    
-                                    @*<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("RSALogin","Home"))>RSA Login</a>&nbsp;| *@ 
-                                    <!-- show login module -->
-                                    <a id="loginbtn" href='#' onclick="$('#login-form').toggle()">RSA Login</a>&nbsp;|
-                                    <!-- end login module -->
-                                    <div id="login-form">
-                                        <div class="chat-bubble-arrow-border"></div>
-                                        <div class="chat-bubble-arrow"></div>
-                                        <form method="post" id="signin" action="http://nlpcpfa.com/newsite/Login_RSA">
-                                            <label for="username">Email:</label>
-                                            <input name="UserName" id="UserName" title="username" value="" type="text">
-                                            <label for="password">Password:</label>
-                                            <input name="password" id="Password" title="password" value="" type="password">
-
-                                            <input class="alert-btn login-btn-home" value="Login" type="submit">
-
-                                            <input name="action" value="login" type="hidden">
-                                            <span style="float: left; margin-top:6px;">
-                                                <a href="" style="text-decoration:underline;">Forgot your password?</a>
-                                                <br />
-                                                <a href="#" style="margin-left: 160px;" onclick="$('#login-form').toggle()">close</a>
-                                            </span>
-
-                                        </form>
-                                    </div>
-                             
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>SMS Enquiry</a>&nbsp;|
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("locations","Home"))>Branch Offices</a>&nbsp;|
-                                    @*<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Blog</a>*@
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                    <br />
+                                    <br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Branch Contribution</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Approved form of return</a><br />
+                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Benefits Administration</a><br />
                                 </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 hidden-xs" style="margin-top:37px">
+                                    <strong>NLPC PFA LIMITED</strong>
+                                    <br />
+                                    <i class="fa fa-envelope-o fa-2x"></i>
+                                    <strong>customercare@nlpcpfa.com</strong>
+                                    312A,<br />
+                                    Ikorodu road,Anthony,<br />
+                                    Lagos.<br />
+                                </div>
+
+                            </div>
+
+                            <div class="panel-footer" >
+                                <center><strong>Copyright 2015 © NLPC PFA LTD.</strong>|All Rights Reserved</center>
+                                <center><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Privacy policy</a> | <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Terms of use</a> |<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Data protection and Confidentiality</a> </center>
+
+
+                            </div>
                         </div>
-				<!-- row 2 ends -->
-				 <!--row 3 -->
-                        <div class="row">
-                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                                       
-                                </div>
- 
-                                <!--<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">-->
-                                        <div>
-                                        <nav class="navbar navbar-default" role="navigation">
-                                                <!-- Brand and toggle get grouped for better mobile display -->
-                                                <div class="navbar-header">
-                                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                                                                <span class="sr-only">Toggle navigation</span>
-                                                                <span class="icon-bar"></span>
-                                                                <span class="icon-bar"></span>
-                                                                <span class="icon-bar"></span>
-                                                        </button>
-                                                       <!-- <a class="navbar-brand" href="#">NLPC-PFA</a>-->
-                                                </div>
-                                       
-                                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                                                        <ul class="nav navbar-nav">
-                                                            @*Remove Home page from the Index page...*@
-                                                           @if (@ViewBag.Title !="Home Page")
-                                                           {    <li><a href="/">Home</a></li>}
-                                                                                             
-                                                                        <li class="dropdown">
-                                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
-                                                                        <ul class="dropdown-menu">
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("About", "Home"))>Who we Are</a></li>
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("missions","Home"))>Our Core Values</a></li>
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("bizstrategy","Home"))>Our Business Strategy</a></li>
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("board", "Home"))>Board of Directors</a></li>
-                                                                        <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("mgtteam", "Home"))>Management Team</a></li>
-                                                                        </ul>
-                                                                        </li>
+                    </div>
+                </div>
 
-                                                            <!--services start-->
-                                                            <li class="dropdown">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("pension", "Home" ))>Corporate Pension</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("individual", "Home"))>Individual Pensions Scheme(IPS)</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("cps", "Home"))>Contributory Pension Scheme</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("progwith", "Home"))>Program Withdrawal</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("pensiontypes","Home"))>Payment Types</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <!--services end-->
-                                                            <!--Financials -->
-                                                            <li class="dropdown">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Financials <b class="caret"></b></a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("fundmgrrpt", "Home"))>Fund Manager's Report</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("investport", "Home"))>Structure of Investment Portfolio</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("auditrep", "Home"))>Audited Report</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("feemgt", "Home"))>Fees</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <!-- financials ends-->
-
-                                                            <!--benefits start-->
-                                                          
-                                                          
-
-                                                                
-                                                                <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("benadmin","Home"))>Benefits</a></li>
-
-                                                            <!--benefits ends-->
+            </div>
+            <!--footer stops -->
 
 
-                                                            <!--reach us-->
-                                                            <li class="dropdown">
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reach Us<b class="caret"></b></a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("locations", "Home"))>Locations</a></li>
-                                                                    <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("customercare", "Home"))>Customer Care</a></li>
-                                                               
-                                                                </ul>
-                                                            </li>
-                                                            <!--reach us end-->
-
-
-                                                            <!--faq starts-->
-                                                                <li><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>FAQs</a></li>                               
-                                                             <!-- faq ends-->
-
-
-                                                        </ul>
-                                                       
-                                                   
-                                                </div><!-- /.navbar-collapse -->
-                                        </nav>
-                               <!--</div>--> 
-                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                                       
-                                </div>
- 						<!-- <br/><br/><br/><br/>  -->  
- 
-                        </div>
-                        <!-- row 4 ends here -->
-
-                        <!--row 6 starts here-->
-                      
-
-<!--include body within here-->
-
-    @RenderBody()
-    <!--stop body here-->
-
-<!--footer starts -->
-<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="panel panel-default">
-						  <div class="panel-body">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-									<strong>Quick Links</strong><br/>
-								<br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Fraud Alert</a><br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Branch Offices</a><br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Term of Use</a><br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Feedback form</a><br/>
-								</div>
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-									<br/>
-									<br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Downloads</a><br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Reports</a><br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Pension Act 2014</a><br/>
-                                    <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Staff Login</a><br/>
-						  </div>
-						  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-						  	<br/>
-							<br/>
-                  <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Branch Contribution</a><br/>
-                  <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Approved form of return</a><br/>
-                  <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Benefits Administration</a><br/>
-						  </div>
-						  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 hidden-xs">
-						  	<strong>NLPC PFA LIMITED</strong>
-						  	<br/>
-						  	<i class="fa fa-envelope-o fa-2x"></i>
-						  	<strong>customercare@nlpcpfa.com</strong>
-						  	312A,<br/>
-						  	Ikorodu road,Anthony,<br/>
-						  	Lagos.<br/>
-						  </div>
-
-						  </div>
-						  
-						  <div class="panel-footer">
-								<center><strong>Copyright 2015 © NLPC PFA LTD.</strong>|All Rights Reserved</center>
-								<center><a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Privacy policy</a> | <a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Terms of use</a> |<a href=@VirtualPathUtility.ToAbsolute(@Url.Action("faq","Home"))>Data protection and Confidentiality</a> </center>
-
-
-							</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-<!--footer stops -->
-
-
-</div>
-<!-- nlpc container -->
-
-
-
-<!-- javascript starts-->
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/otherscripts")
-@RenderSection("scripts", required: false)
-<!--javascript stops-->
+        </div>
+        <!-- nlpc container -->
+        <!-- javascript starts-->
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/otherscripts")
+        @RenderSection("scripts", required: false)
+        <!--javascript stops-->
 </body>
 </html>
